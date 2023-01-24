@@ -67,9 +67,7 @@ const updateTodo = text => {
 
 const getInfos = () => {
     let storage = {...localStorage}
-    console.log(storage);
     storage = Object.keys(storage).sort().reduce((r, k) => (r[k] = storage[k], r), {});
-    console.log(storage);
     todoList.innerHTML = "";
     for(const prop in storage)
         saveTodo(prop, storage[prop]);

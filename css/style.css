@@ -1,8 +1,18 @@
+:root{
+    --cor0 : #fff;
+    --cor1 : #fdfdfd;
+    --cor2 : #ddd;
+    --cor3 : #ccc;
+    --cor4 : #395169;
+    --cor5 : #102f5e;
+    --cor6 : #333;
+}
+
 *{
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #333;
+    color: var(--cor6);
     box-sizing: border-box;
 }
 
@@ -10,11 +20,12 @@ body{
     background-image: url(../images/bg.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 button{
-    background-color: #fdfdfd;
-    color: #102f5e;
+    background-color: var(--cor1);
+    color: var(--cor5);
     padding: .3rem .6rem;
     font-size: 1rem;
     cursor: pointer;
@@ -25,11 +36,11 @@ button{
 }
 
 button:hover{
-    background-color: #102f5e;
-    color: rgb(255, 255, 255);
+    background-color: var(--cor5);
+    color: var(--cor0);
 }
 button:hover > i{
-    color: #fff;
+    color: var(--cor0);
 }
 
 button i{
@@ -50,7 +61,7 @@ input, select {
 .todo-container {
     max-width: 450px;
     margin: 3rem auto;
-    background-color: #fdfdfd;
+    background-color: var(--cor1);
     padding: 1.5rem;
     border-radius: 15px;
 }
@@ -58,14 +69,14 @@ input, select {
 .todo-container header{
     text-align: center;
     padding: 0 1rem 1rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--cor3);
 }
 
 /* TODO Form*/
 
 #todo-form, #edit-form{
     padding: 1rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--cor3);
 }
 
 #todo-form p, #edit-form p {
@@ -89,7 +100,7 @@ input, select {
 
 #toolbar {
     padding: 1rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--cor3);
     display: flex;
 }
 
@@ -98,7 +109,7 @@ input, select {
 }
 
 #search {
-    border-right: 1px solid #ddd;
+    border-right: 1px solid var(--cor2);
     padding-right: 1rem;
     margin-right: 1rem;
     width: 65%;
@@ -132,7 +143,7 @@ input, select {
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--cor2);
     transition: .3s;
 }
 
@@ -146,12 +157,36 @@ input, select {
 }
 
 .done {
-    background-color: #395169;
+    background-color: var(--cor4);
     border-radius: 8px;
 }
 
 .done h3{
-    color: #fff;
+    color: var(--cor0);
     text-decoration: line-through;
     font-style: italic;
+}
+
+/*--------footer---------*/
+
+footer{
+    background-color: var(--cor5);
+    color: var(--cor0);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 4px;
+}
+
+footer > a {
+    text-decoration: none;
+    color: var(--cor0);
+    transition-duration: .4s;
+}
+
+footer > a:hover{
+    background-color: var(--cor0);
+    color: var(--cor5);
+    border-radius: 5px;
 }
