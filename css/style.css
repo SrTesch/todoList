@@ -21,12 +21,12 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .4s;
+    transition-duration: .5s;
 }
 
 button:hover{
     background-color: #102f5e;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 button:hover > i{
     color: #fff;
